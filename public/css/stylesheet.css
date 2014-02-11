@@ -1,0 +1,344 @@
+
+body.blue .label.label-info,
+body.blue .cityscape,
+body.blue .footer {
+    background-color: #328cff;
+    /*
+    background: -webkit-repeating-linear-gradient(90deg, indigo 0px, #328cff 300px, purple 400px, indigo 600px);
+    background: -moz-repeating-linear-gradient(90deg, indigo 0px, #328cff 300px, purple 400px, indigo 600px);
+    */
+}
+
+body.green .label.label-info,
+body.green .cityscape,
+body.green .footer {
+    background-color: #00c862;
+    /*
+    background: -webkit-repeating-linear-gradient(90deg, #13923d 0px, #00c862 300px, #0c632b 400px, #13923d 600px);
+    background: -moz-repeating-linear-gradient(90deg, green 0px, #00c862 300px, darkgreen 400px, green 600px);
+    */
+}
+
+body.orange .label.label-info,
+body.orange .cityscape,
+body.orange .footer {
+    background-color: #ff9200;
+    /*
+    background: -webkit-repeating-linear-gradient(90deg, gold 0px, #ff9200 300px, orange 400px, gold 600px);
+    background: -moz-repeating-linear-gradient(90deg, green 0px, #ff9200 300px, darkgreen 400px, green 600px);
+    */
+}
+
+body.red .label.label-info,
+body.red .cityscape,
+body.red .footer {
+    background-color: #c80000;
+}
+
+.navbar {
+    border-color: transparent;
+    border-bottom: 0;
+    border-radius: 0;
+    margin-top: 179px;
+    position: relative;
+    bottom: 0;
+}
+
+.navbar .container {
+    position: relative;
+    top: 20px;
+}
+
+@media(max-width:767px) {
+    .navbar {
+        margin-top: 0;
+        margin-bottom: 0 !important;
+    }
+    .navbar .container {
+        top: 0;
+    }
+    .navbar-default .navbar-collapse {
+        background: #fff;
+        border: none;
+        outline: none;
+        border-bottom: 2px solid #ccc;
+    }
+    .nav.navbar-nav a {
+        color: #000 !important;
+    }
+}
+
+.navbar.navbar-default {
+    background-color: transparent;
+}
+
+.navbar.navbar-default a,
+.navbar.navbar-default a:hover,
+.navbar.navbar-default li a,
+.navbar.navbar-default li a:hover {
+    color: #fff;
+    font-size: 18px;
+    line-height: 20px;
+}
+
+.navbar.navbar-default a.active,
+.navbar.navbar-default li.active a,
+.navbar.navbar-default li.active:hover a {
+    background: #fff;
+    color: #444;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    color: #444;
+}
+
+h1,h2,h3 {
+    font-weight: 200;
+}
+
+h1 small,
+h2 small {
+    font-weight: 300;
+}
+
+.label-info {
+    background-color: #888;
+    padding: 5px 10px;
+    font-size: 14px;
+    line-height: 14px;
+}
+
+p {
+    font-size: 16px;
+    line-height: 22px;
+}
+.content {
+    background: #fff;
+    overflow: auto;
+    min-height: 500px;
+    padding: 20px 0;
+}
+
+.footer {
+    background: url(/img/footer-background.png) center center;
+    padding: 20px;
+    color: #fff;
+    font-family: 'Press Start 2P', cursive;
+    font-weight: 400;
+    overflow: auto;
+    border-top: 5px solid rgba(255,255,255,0.25);
+    border-bottom: 5px solid rgba(0,0,0,0.25);
+}
+
+.footer p {
+    font-size: 16px;
+    padding: 0 10px;
+    display: inline;
+}
+
+.footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer .quote {
+    padding: 10px 15px;
+    line-height: 24px;
+    background: rgba(0,0,0,0.5);
+}
+
+.footer a.love-html5 {
+    position: relative;
+    top: 0px;
+    right: 0px;
+    float: right;
+    text-decoration: none;
+    background: orange;
+    padding: 5px 10px;
+    line-height: 16px;
+}
+
+.cityscape {
+    position: absolute;
+    top: -200px;
+    left: 0;
+    height: 270px;
+    overflow: hidden;
+    width: 100%;
+    z-index: -1;
+}
+
+.cityscape h1 {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    z-index: 10;
+    color: #fff;
+    padding: 10px 15px;
+    font-size: 42px;
+    line-height: 42px;
+    font-family: 'Press Start 2P', cursive;
+    font-weight: 400;
+    text-shadow: 0 4px rgba(0,0,0,0.25);
+}
+
+.cityscape .city {
+    z-index: 5;
+    position: relative;
+    top: 20px;
+    width: 100%;
+    height: 280px;    
+    overflow: hidden;
+    opacity: 0.3;
+}
+
+.cityscape .buildings-background,
+.cityscape .buildings-foreground {
+    z-index: 3;
+    position: absolute;
+    height: 500px;
+    width: 100%;
+    min-width: 1024px;
+    bottom: 0px;
+    left: 0px;
+}
+
+.cityscape .buildings-foreground {
+    background: url(/img/cityscape/buildings-foreground.png) repeat-x 90px 290px;
+}
+
+.cityscape .buildings-background {
+    left: -350px;
+    z-index: 2;
+    background: url(/img/cityscape/buildings-background.png) repeat-x center 280px;
+    bottom: 70px;
+    width: 200%;
+    opacity: 0.5;
+}
+
+.cityscape .landmarks {
+    position: absolute;
+    bottom: 20px;
+    left: -10px;
+    height: 300px;
+    width: 800px;
+    background: url(/img/cityscape/landmarks.png);
+    background-position: center 320px;
+    z-index: 3;
+}
+
+.cityscape .london-eye {
+    position: absolute;
+    bottom: 7px;
+    left: 197px;
+    height: 292px;
+    width: 292px;
+    background-image: url(/img/cityscape/london-eye.png);
+    -webkit-animation-name: rotate-london-eye;
+    -webkit-animation-duration: 120s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    animation-name: rotate-london-eye;
+    animation-duration: 120s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    z-index: 5;
+}
+
+@keyframes rotate-london-eye {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+}
+
+@-webkit-keyframes rotate-london-eye {
+    from {-webkit-transform:scale(1) rotate(0deg);}
+    to {-webkit-transform:scale(1) rotate(360deg);}
+}
+
+.cityscape .fog-container {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 300px;
+    width: 100%;
+    z-index: 2;
+    opacity: 0.75;
+}
+
+.cityscape .fog-container .fog {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 300px;
+    width: 100%;
+    background: url(/img/cityscape/fog.png);
+    background-repeat: repeat-x;
+    z-index: 2;
+    -webkit-animation-name: rolling-fog;
+    -webkit-animation-duration: 60s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    animation-name: rolling-fog;
+    animation-duration: 60s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@-webkit-keyframes rolling-fog {
+    0% {
+        background-position: 0px 0px;
+    }
+    50% {
+        background-position: 450px 0px;
+    }
+    100% {
+        background-position: 900px 0px;
+    }
+}
+
+@keyframes rolling-fog {
+    0% {
+        background-position: 0px 0px;
+    }
+    50% {
+        background-position: 450px 0px;
+    }
+    100% {
+        background-position: 900px 0px;
+    }
+}
+
+.block {    
+    -webkit-animation: block .75s linear infinite;
+    animation: block .75s linear infinite;
+    display: block;
+    height: 0px;
+    width: 20px;
+    border-top: 38px solid #fff;
+    border-bottom: 4px solid rgba(0,0,0,0.25);
+}
+
+@-webkit-keyframes block {
+    0% { opacity: 1; }
+    50% { opacity: 1; }
+    50.01% { opacity: 0; }
+    100% { opacity: 0; }
+}
+
+@keyframes block {
+    0% { opacity: 1; }
+    50% { opacity: 1; }
+    50.01% { opacity: 0; }
+    100% { opacity: 0; }
+}
+
+.logos img {
+    margin: 0 10px;
+/*    filter: gray;
+    -webkit-filter: grayscale(100%);
+*/}
+
+.logos img:hover {
+    filter: none;
+    -webkit-filter: grayscale(0%);
+}
