@@ -35,5 +35,8 @@ casper.thenOpen("http://planetside-tracker.com", function() {
     this.capture(screenshotDir + "pst.png", viewPort);
 });
 
+casper.start("http://feedback.public-scrutiny-office.org/", function() {
+    this.capture(screenshotDir + "pso-feedback.png", viewPort);
+});
 
 casper.run();
