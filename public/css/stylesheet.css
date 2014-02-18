@@ -1,37 +1,40 @@
+/** 
+ * @todo Refactor to use myth.io
+ */
 
+body.blue,
+body.blue .navbar.navbar-default a.active,
+body.blue .navbar.navbar-default li.active a,
+body.blue .navbar.navbar-default li.active:hover a,
 body.blue .label.label-info,
-body.blue .cityscape,
-body.blue .footer {
-    background-color: #328cff;
-    /*
-    background: -webkit-repeating-linear-gradient(90deg, indigo 0px, #328cff 300px, purple 400px, indigo 600px);
-    background: -moz-repeating-linear-gradient(90deg, indigo 0px, #328cff 300px, purple 400px, indigo 600px);
-    */
+body.blue .cityscape {
+    background-color: #004d9d;
 }
 
+body.green,
+body.green .navbar.navbar-default a.active,
+body.green .navbar.navbar-default li.active a,
+body.green .navbar.navbar-default li.active:hover a,
 body.green .label.label-info,
-body.green .cityscape,
-body.green .footer {
-    background-color: #00c862;
-    /*
-    background: -webkit-repeating-linear-gradient(90deg, #13923d 0px, #00c862 300px, #0c632b 400px, #13923d 600px);
-    background: -moz-repeating-linear-gradient(90deg, green 0px, #00c862 300px, darkgreen 400px, green 600px);
-    */
+body.green .cityscape {
+    background-color: #007c38;
 }
 
+body.orange,
+body.orange .navbar.navbar-default a.active,
+body.orange .navbar.navbar-default li.active a,
+body.orange .navbar.navbar-default li.active:hover a,
 body.orange .label.label-info,
-body.orange .cityscape,
-body.orange .footer {
-    background-color: #ff9200;
-    /*
-    background: -webkit-repeating-linear-gradient(90deg, gold 0px, #ff9200 300px, orange 400px, gold 600px);
-    background: -moz-repeating-linear-gradient(90deg, green 0px, #ff9200 300px, darkgreen 400px, green 600px);
-    */
+body.orange .cityscape {
+    background-color: #4c00b2;
 }
 
+body.red,
+body.red .navbar.navbar-default a.active,
+body.red .navbar.navbar-default li.active a,
+body.red .navbar.navbar-default li.active:hover a,
 body.red .label.label-info,
-body.red .cityscape,
-body.red .footer {
+body.red .cityscape {
     background-color: #c80000;
 }
 
@@ -57,14 +60,31 @@ body.red .footer {
     .navbar .container {
         top: 0;
     }
-    .navbar-default .navbar-collapse {
-        background: #fff;
+    .navbar-toggle {
+        background: rgba(0,0,0,0.25) !important;
+        border-color: transparent !important;
+        border-radius: 0;
+    }    
+    .navbar-toggle:hover {
+        background: rgba(0,0,0,0.5) !important;
+    }    
+    .navbar-toggle .icon-bar {
+        background: #fff !important;
+    }    
+    .navbar-collapse {
         border: none;
         outline: none;
-        border-bottom: 2px solid #ccc;
-    }
-    .nav.navbar-nav a {
-        color: #000 !important;
+        border: none !important;
+        border-top: none !important;
+    }    
+    .nav.navbar-nav {
+        margin-top: 0;
+        margin-bottom: 0;
+    }    
+    .nav.navbar-nav a,
+    .nav.navbar-nav a.active {
+        background: rgba(0,0,0,0.5) !important;
+        color: #fff !important;
     }
 }
 
@@ -84,12 +104,11 @@ body.red .footer {
 .navbar.navbar-default a.active,
 .navbar.navbar-default li.active a,
 .navbar.navbar-default li.active:hover a {
-    background: #fff;
-    color: #444;
+    color: #fff;
 }
 
 h1,h2,h3,h4,h5,h6 {
-    color: #444;
+    color: #fff !important;
 }
 
 h1,h2,h3 {
@@ -105,29 +124,55 @@ h2 small {
     background-color: #888;
     padding: 5px 10px;
     font-size: 14px;
-    line-height: 14px;
+    line-height: 32px;
 }
 
 p {
     font-size: 16px;
     line-height: 22px;
 }
-.content {
-    background: #fff;
-    overflow: auto;
-    min-height: 500px;
-    padding: 20px 0;
+
+@media(min-width:768px) {
+    .content {
+        overflow: auto;
+        min-height: 500px;
+        padding: 20px 0;
+    }
+}
+
+.container.container-main {
+    padding: 5px 30px;
+    background: rgba(0,0,0,0.2);
+    color: #fff !important;
+    padding-bottom: 20px;
+}
+
+@media(min-width:768px) {
+    .container.container-main {
+        border-radius: 5px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+}
+
+.container.container-main a {
+    color: #fff !important;
+    padding-bottom: 2px;
+    text-decoration: none !important;
+    border-bottom: 2px solid rgba(255,255,255,0.5);
+}
+
+.container.container-main a:hover {
+    border-color: #fff;
 }
 
 .footer {
-    background: url(/img/footer-background.png) center center;
+    background: rgba(0,0,0,0.25);
     padding: 20px;
     color: #fff;
     font-family: 'Press Start 2P', cursive;
     font-weight: 400;
     overflow: auto;
-    border-top: 5px solid rgba(255,255,255,0.25);
-    border-bottom: 5px solid rgba(0,0,0,0.25);
 }
 
 .footer p {
@@ -166,6 +211,12 @@ p {
     overflow: hidden;
     width: 100%;
     z-index: -1;
+}
+
+@media(max-width:767px) {
+    .cityscape {
+        display: none;
+    }
 }
 
 .cityscape h1 {

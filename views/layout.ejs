@@ -39,13 +39,14 @@
             </div>
             <div class="container">
                 <div class="navbar-header">
-                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                            <span class="sr-only">Toggle navigation</span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
-                        <a class="navbar-brand<% if (template == "home") { %> active<% } %>" href="/"><i class="fa fa-lg fa-home"></i></a>
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="hidden-xs navbar-brand<% if (template == "home") { %> active<% } %>" href="/"><i class="fa fa-lg fa-home"></i></a>
+                    <a class="visible-xs navbar-brand<% if (template == "home") { %> active<% } %>" href="/"><i class="fa fa-lg fa-home"></i> iaincollins.com</a>
                 </div>
                 <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav">
@@ -55,7 +56,7 @@
                     <li<% if (template == "software") { %> class="active"<% } %>><a href="/software"><i class="fa fa-lg fa-code"></i> Software</a></li>
                     <li<% if (template == "contact") { %> class="active"<% } %>><a href="/contact"><i class="fa fa-lg fa-phone"></i>  Contact</a></li>
                     </ul>
-                </div><!--/.nav-collapse -->
+                </div>
             </div>
         </div>
         <div class="content">
@@ -63,11 +64,15 @@
         </div>
         <footer>
             <div class="footer">
-                <div class="container">
+                <div class="container hidden-xs">
                     <p class="quote">
-                    
                         <span class="eight-ball">Magic 8 Ball says</span> &ldquo;<a href="http://starwars.com"><%= quote %></a>&rdquo;
                     </p>
+                    <p>
+                        <a class="love-html5" href="http://validator.w3.org/check?uri=referer">HTML5</a>
+                    </p>
+                </div>
+                <div class="container visible-xs">
                     <p>
                         <a class="love-html5" href="http://validator.w3.org/check?uri=referer">HTML5</a>
                     </p>
