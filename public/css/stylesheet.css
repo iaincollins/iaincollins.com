@@ -167,11 +167,15 @@ p {
 }
 
 .footer {
-    background: rgba(0,0,0,0.25);
-    padding: 20px;
     color: #fff;
     font-family: 'Press Start 2P', cursive;
     font-weight: 400;
+    overflow: auto;
+}
+
+.footer .container {
+    padding: 20px !important;
+    background: rgba(0,0,0,0.25);
     overflow: auto;
 }
 
