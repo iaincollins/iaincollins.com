@@ -135,7 +135,6 @@ p {
 @media(min-width:768px) {
     .content {
         overflow: auto;
-        min-height: 500px;
         padding: 20px 0;
     }
 }
@@ -268,7 +267,7 @@ p {
     background: url(/img/cityscape/buildings-background.png) repeat-x center 280px;
     bottom: 70px;
     width: 200%;
-    opacity: 0.5;
+    opacity: 0.75;
 }
 
 .cityscape .landmarks {
