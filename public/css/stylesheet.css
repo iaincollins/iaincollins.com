@@ -388,9 +388,9 @@ p {
 
 .logos img {
     margin: 0 10px;
-/*    filter: gray;
+    filter: gray;
     -webkit-filter: grayscale(100%);
-*/}
+}
 
 .logos img:hover {
     filter: none;
