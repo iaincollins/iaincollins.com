@@ -23,6 +23,10 @@ casper.start("http://public-scrutiny-office.org/", function() {
     this.capture(screenshotDir + "pso.png", viewPort);
 });
 
+casper.thenOpen("http://jess.iaincollins.com", function() {
+    this.capture(screenshotDir + "jess.png", viewPort);
+});
+
 casper.thenOpen("http://api.tinata.co.uk/maps/economies", function() {
     this.capture(screenshotDir + "tinatapi.png", viewPort);
 });
